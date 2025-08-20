@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Q3 FY2025 Earnings — RevealJS  (22f3001013@ds.study.iitm.ac.in) </title>
+
+  <!-- Reveal.js core CSS & Theme -->
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@5/dist/reveal.css" />
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@5/dist/theme/black.css" id="theme" />
+  <!-- Code highlight theme -->
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@5/plugin/highlight/monokai.css" />
+  <!-- KaTeX CSS for math rendering -->
+  <link rel="stylesheet" href="https://unpkg.com/katex@0.16.11/dist/katex.min.css" />
+
+  <style>
+    /* Simple footer/email badge */
+    .email-badge {
+      position: fixed; right: 12px; bottom: 10px; z-index: 10;
+      padding: 6px 10px; border-radius: 999px; font-size: 14px;
+      backdrop-filter: blur(6px); background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    .reveal h1, .reveal h2, .reveal h3 { letter-spacing: 0.3px; }
+    .kpi-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; }
+    .kpi-card { padding: 18px; border-radius: 16px; background: rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); }
+    .kpi-card .label { opacity: 0.75; font-size: 0.8em; }
+    .kpi-card .value { font-size: 1.6em; font-weight: 700; margin-top: 6px; }
+  </style>
+</head>
+<body>
+  <div class="email-badge">📧 22f3001013@ds.stidy.iitm.ac.in </div>
+
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Title Slide (with speaker notes and fragments) -->
+      <section>
+        <h2>Quarterly Earnings — Q3 FY2025</h2>
+        <p>Prepared by <strong>Technical Consultant</strong></p>
+        <p style="margin-top: 18px">22f3001013@ds.study.iitm.ac.in</p>
+        <ul>
+          <li class="fragment">Interactive RevealJS presentation</li>
+          <li class="fragment">Markdown, code, math, and speaker notes</li>
+          <li class="fragment">Optimized for GitHub Pages</li>
+        </ul>
+        <aside class="notes">
+          Welcome everyone. This deck showcases our quarterly results and demonstrates modern presentation capabilities: fragments for staged reveals, live code highlighting, Markdown slides, and math typesetting for finance formulas. Use the arrow keys to navigate.
+        </aside>
+      </section>
+
+      <!-- KPI Grid (fragments) -->
+      <section>
+        <h3>Headline KPIs (Illustrative)</h3>
+        <div class="kpi-grid">
+          <div class="kpi-card fragment" data-fragment-index="1">
+            <div class="label">Revenue</div>
+            <div class="value">₹ 1,245 Cr</div>
+          </div>
+          <div class="kpi-card fragment" data-fragment-index="2">
+            <div class="label">Operating Margin</div>
+            <div class="value">21.4%</div>
+          </div>
+          <div class="kpi-card fragment" data-fragment-index="3">
+            <div class="label">EPS</div>
+            <div class="value">₹ 18.72</div>
+          </div>
+        </div>
+        <aside class="notes">Values here are placeholders for demo purposes. Replace them with actual numbers before publishing.</aside>
+      </section>
+
+      <!-- Markdown Slide (requirement: at least one slide written in Markdown) -->
+      <section data-markdown>
+        <textarea data-template>
+# Q3 Highlights (Markdown)
+
+- **Geography Mix:** India (62%), APAC (23%), EMEA (15%)
+- **Segment Growth:** Retail Banking **+9%**, Corporate **+5%**, Wealth **+12%**
+- **Digital Adoption:** 78% of transactions via mobile/web
+- **Risk:** GNPA at **2.1%**, NNPA at **0.6%**
+
+> _Note: Replace with audited metrics prior to release._
+        </textarea>
+      </section>
+
+      <!-- Code Sample with syntax highlighting -->
+      <section>
+        <h3>Code Sample — Simple NPV (Python)</h3>
+        <pre><code class="language-python" data-trim data-noescape>
+import math
+from typing import Iterable
+
+def npv(rate: float, cashflows: Iterable[float]) -&gt; float:
+    """Net Present Value excluding C0 (use negative initial investment in cashflows if needed)."""
+    return sum(cf / ((1 + rate) ** t) for t, cf in enumerate(cashflows, start=1))
+
+# Example: 10% discount rate, yearly inflows
+print(npv(0.10, [100, 120, 140, 160]))
+        </code></pre>
+        <aside class="notes">Explain the intuition: discount future cash flows by (1+r)^t. This example excludes C0; include it as a negative in the list or subtract externally.</aside>
+      </section>
+
+      <!-- Mathematics (KaTeX via Reveal Math plugin) -->
+      <section>
+        <h3>Financial Math</h3>
+        <p>Compound Growth:</p>
+        <p>\( \mathrm{FV} = \mathrm{PV}\,\big(1 + \tfrac{r}{n}\big)^{n t} \)</p>
+        <p class="fragment">Net Present Value:</p>
+        <p class="fragment">\( \mathrm{NPV} = \sum_{t=1}^{T} \dfrac{C_t}{(1+r)^t} - C_0 \)</p>
+        <aside class="notes">Use these to motivate our valuation discussion. Show sensitivity to r and growth assumptions.</aside>
+      </section>
+
+      <!-- Closing / Contact -->
+      <section>
+        <h3>Thank You</h3>
+        <p>Questions? Reach me at <strong>22f3001013@ds.study.iitm.ac.in</strong></p>
+        <ul>
+          <li class="fragment">Open-source deck — host on GitHub Pages</li>
+          <li class="fragment">Replace placeholders with audited data</li>
+          <li class="fragment">Add charts/screenshots as needed</li>
+        </ul>
+        <aside class="notes">Invite Q&A. Mention that the deck is easily maintainable in source control.</aside>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- Reveal.js core & plugins -->
+  <script src="https://unpkg.com/reveal.js@5/dist/reveal.js"></script>
+  <script src="https://unpkg.com/reveal.js@5/plugin/markdown/markdown.js"></script>
+  <script src="https://unpkg.com/reveal.js@5/plugin/highlight/highlight.js"></script>
+  <script src="https://unpkg.com/reveal.js@5/plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@5/plugin/math/math.js"></script>
+
+  <script>
+    // Initialize Reveal with plugins
+
+    const email = "22f3001013@ds.study.iitm.ac.in";
+
+    document.write('<p>Prepared by: ' + email + '</p>');
+
+    Reveal.initialize({
+      hash: true,
+      slideNumber: 'c/t',
+      transition: 'slide',
+      plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ],
+      // Optional: tweak controls
+      controls: true,
+      progress: true,
+      center: true
+    });
+  </script>
+  
+  <noscript>
+
+    <p>Prepared by: 22f3001013@ds.study.iitm.ac.in</p>
+
+</noscript>
+</body>
+</html>
